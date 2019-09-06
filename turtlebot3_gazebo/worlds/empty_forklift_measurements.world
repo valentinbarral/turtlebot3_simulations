@@ -1,0 +1,245 @@
+<sdf version="1.4">
+  <world name="default">
+
+  <gui>
+    <camera name="user_camera">
+      <pose>6 6 22 0 1.5707 1.5707</pose>
+    </camera>
+  </gui>
+
+
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://AC2</uri>
+      <pose>-5.0 3.9 0 0 0 0</pose>
+    </include>
+
+    <model name="uwb_anchor0">
+      <pose>0 0 1.5 0 0 0</pose>
+      <static>1</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="uwb_anchor1">
+      <pose>-2.5 1 1.5 0 0 0</pose>
+      <static>1</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="uwb_anchor2">
+      <pose>2.5 1 1.5 0 0 0</pose>
+      <static>1</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+<!--     <model name="tag_0">
+      <pose>0 3 0 0 0 0</pose>
+      <static>1</static>
+      <link name="tag_0">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_0</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>0</tag_id>
+    </plugin>
+  </model>
+
+
+    <model name="tag_1">
+      <pose>0 3.2 0 0 0 0</pose>
+      <static>1</static>
+      <link name="tag_1">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_1</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>1</tag_id>
+    </plugin>
+  </model>
+
+
+      <model name="tag_2">
+      <pose>0 3.4 0 0 0 0</pose>
+      <static>1</static>
+      <link name="tag_2">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_2</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>2</tag_id>
+    </plugin>
+  </model>
+
+
+    <model name="tag_3">
+      <pose>0 3.6 0 0 0 0</pose>
+      <static>1</static>
+      <link name="tag_3">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_3</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>3</tag_id>
+    </plugin>
+  </model>
+
+
+    <model name="tag_4">
+      <pose>0 3.8 0 0 0 0</pose>
+      <static>1</static>
+      <link name="tag_4">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_4</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>4</tag_id>
+    </plugin>
+  </model>
+
+    <model name="tag_5">
+      <pose>0 4 0 0 0 0</pose>
+      <static>1</static>
+      <link name="tag_5">
+      <collision name='tag_5_Collision'>
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.2</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+      </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_5</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>5</tag_id>
+    </plugin>
+  </model> -->
+
+
+
+
+    <physics type="ode">
+      <real_time_update_rate>500.0</real_time_update_rate>
+      <max_step_size>0.002</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <precon_iters>0</precon_iters>
+          <sor>1.400000</sor>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.00001</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>2000.000000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01000</contact_surface_layer>
+        </constraints>
+      </ode>
+    </physics>
+  </world>
+
+
+</sdf>    
+
+
