@@ -25,12 +25,12 @@
     </include>
 
     <include>
-      <uri>model://ForkliftBuilding02</uri>
-      <pose>6.5 7.645 0 0 0 0</pose>
+      <uri>model://ForkliftBuilding03</uri>
+      <pose>4 4 0 0 0 0</pose>
     </include>
 
 
-        <model name="uwb_anchor0">
+    <model name="uwb_anchor0">
       <pose>1 1 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
@@ -44,7 +44,7 @@
       </link>
     </model>
     <model name="uwb_anchor1">
-      <pose>1 8 2 0 0 0</pose>
+      <pose>1 4 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
         <visual name="visual">
@@ -57,7 +57,7 @@
       </link>
     </model>
     <model name="uwb_anchor2">
-      <pose>7 14 2 0 0 0</pose>
+      <pose>1 7 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
         <visual name="visual">
@@ -70,7 +70,7 @@
       </link>
     </model>
     <model name="uwb_anchor3">
-      <pose>12 14 2 0 0 0</pose>
+      <pose>7 4 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
         <visual name="visual">
@@ -83,7 +83,7 @@
       </link>
     </model>
     <model name="uwb_anchor4">
-      <pose>12 3 2 0 0 0</pose>
+      <pose>7 7 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
         <visual name="visual">
@@ -97,7 +97,7 @@
     </model>
 
     <model name="uwb_anchor5">
-      <pose>8 1 2 0 0 0</pose>
+      <pose>4 7 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
         <visual name="visual">
@@ -111,7 +111,7 @@
     </model>
 
     <model name="uwb_anchor6">
-      <pose>5 2 2 0 0 0</pose>
+      <pose>7 1 2 0 0 0</pose>
       <static>1</static>
       <link name="link">
         <visual name="visual">

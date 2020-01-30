@@ -1,0 +1,78 @@
+<launch>
+  <param name="circumference" value="$(eval 2.* 3.1415)" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/empty_grid.world" />
+    <arg name="paused" value="false" />
+    <arg name="use_sim_time" value="true" />
+    <arg name="gui" value="false" />
+    <arg name="headless" value="false" />
+    <arg name="debug" value="false" />
+    <arg name="verbose" value="true" />
+  </include>
+
+
+<group ns="0">
+    <arg name="tag_id" default="0" />
+    <arg name="y_pos" default="5" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 3.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="1">
+    <arg name="tag_id" default="1" />
+    <arg name="y_pos" default="5" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 4.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="2">
+    <arg name="tag_id" default="2" />
+    <arg name="y_pos" default="5" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 5.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="3">
+    <arg name="tag_id" default="3" />
+    <arg name="y_pos" default="4" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 3.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="4">
+    <arg name="tag_id" default="4" />
+    <arg name="y_pos" default="4" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 4.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="5">
+    <arg name="tag_id" default="5" />
+    <arg name="y_pos" default="4" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 5.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="6">
+    <arg name="tag_id" default="6" />
+    <arg name="y_pos" default="3" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 3.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="7">
+    <arg name="tag_id" default="7" />
+    <arg name="y_pos" default="3" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 4.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+  <group ns="8">
+    <arg name="tag_id" default="8" />
+    <arg name="y_pos" default="3" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/uwb_tag.urdf.xacro' tag_id:=$(arg tag_id)" />
+    <node pkg="gazebo_ros" type="spawn_model" name="tag_$(arg tag_id)" args="-urdf -model tag_$(arg tag_id) -x 5.5 -y $(arg y_pos) -z 1.280 -Y -1.570796 -param robot_description" />
+  </group>
+
+
+
+  <arg name="marker_frequency" default="2" />
+  <arg name="marker_collision" default="false" />
+  <include file="$(find gazebo2rviz)/launch/gazebo2tf.launch" />
+  <include file="$(find gazebo2rviz)/launch/gazebo2marker.launch">
+    <arg name="frequency" value="$(arg marker_frequency)" />
+    <arg name="collision" value="$(arg marker_collision)" />
+  </include>
+</launch>
